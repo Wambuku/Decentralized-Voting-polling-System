@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "dvps_backend": {
+      "main": "src/dvps_backend/main.mo",
+      "type": "motoko"
+    },
+    "dvps_frontend": {
+      "dependencies": [
+        "dvps_backend"
+      ],
+      "source": [
+        "src/dvps_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "dvps_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
