@@ -5,22 +5,20 @@
       "type": "motoko"
     },
     "dvps_frontend": {
-      "dependencies": [
-        "dvps_backend"
-      ],
       "source": [
-        "src/dvps_frontend/dist"
+        "src/dvps_frontend/assets"
       ],
       "type": "assets",
-      "workspace": "dvps_frontend"
+      "dependencies": [
+        "dvps_backend"
+      ]
     }
   },
-  "defaults": {
-    "build": {
-      "args": "",
-      "packtool": ""
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
     }
   },
-  "output_env_file": ".env",
   "version": 1
 }
